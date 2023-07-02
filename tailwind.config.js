@@ -7,11 +7,27 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'accent-1': '#333',
+        'primary':'rgb(var(--color-primary))',
       },
+      keyframes:{
+        blinker:{
+          "from":{
+            "visibility":"hidden",
+            "color": "#ffff",
+            
+          },
+          "to":{
+            "color": "#424242",
+            "visibility":"visible",
+            "background-color":"transparent",
+          }
+        }
+      },
+      animation:{
+        blinker: 'blinker 1s linear infinite'
+      }
     },
   },
   plugins: [],
