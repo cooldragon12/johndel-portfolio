@@ -1,6 +1,7 @@
 import NavBar from '@/components/Navigation/NavBar'
 import './globals.css'
 import { Poppins } from 'next/font/google'
+import { SectionAnchorProvider } from '@/providers/SectionAnchor'
 
 const poppins = Poppins({
   weight: ['200','400', '700', '900'],
@@ -20,10 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <nav className='lg:right-0 right-1/2 top-0 lg:top-1/2 fixed flex text-center lg:text-right justify-center items-center'>
-          <NavBar/>
-        </nav>
-        {children}
+        <SectionAnchorProvider>
+          {children}
+        </SectionAnchorProvider>
       </body>
     </html>
   )

@@ -4,22 +4,23 @@
 
 ::-webkit-scrollbar {
   background-color: #1d1d1d;
-  width: 7px;
+  width: 2px;
   height: 7px;
+  border-radius: 16px;
 }
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: #131313;
   -webkit-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background: #424242;
 }
@@ -28,6 +29,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255,255,255;
   --color-primary:28, 28, 28;
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -37,7 +39,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
-
+*{
+  scroll-behavior: smooth !important;
+}
 body {
   color: rgb(var(--color-primary));
   background-color:rgb(var(--background-rgb));
