@@ -4,13 +4,13 @@ import Typewriter from "@/components/util/Typewriter";
 import Image from "next/image";
 import MyImage from "@/assets/personal_photo.jpg"
 import { useEffect, useRef } from "react";
-import { animate, stagger , motion, useTime, useTransform} from "framer-motion";
+import { animate, stagger , motion} from "framer-motion";
 /**
  * 
  * @description This is the introduction section of the landing page of the portfolio
  */
 const Introduction = () => {
-    const time = useTime();
+
     useEffect(() => {
         animate([
             [
@@ -19,7 +19,7 @@ const Introduction = () => {
                     opacity: [1, 0],
                 },
                 {
-                    duration: 0.5,
+                    duration: 0.3,
                     type: "decay",
                     delay: 1,
                 }
@@ -30,7 +30,7 @@ const Introduction = () => {
                 width: ["0%", "75%"],
             },
             {
-                duration: 1,
+                duration: 0.5,
                 type: "inertia",
                 
             }
@@ -43,7 +43,7 @@ const Introduction = () => {
 
                 },
                 {
-                    duration: 0.8,
+                    duration: 0.6,
                     delay: 2.4,
                     type: "inertia"
                 }
@@ -60,7 +60,7 @@ const Introduction = () => {
                     opacity: [0, 1],
                 }, // Properties
                 {
-                    duration: 1,
+                    duration: 0.8,
                     type: "inertia",
                     delay: 2.6,
 
@@ -91,7 +91,7 @@ const Introduction = () => {
                 </h1>
                 <div className="flex">
                     <h2 className="text-[2rem] font-semibold">
-                        <Typewriter  text="I am a" speed={100} />
+                        <Typewriter  text="I am a" speed={50} />
                         <motion.span id="blinker-outside" className="animate-blinker bg-primary">&nbsp;</motion.span>
                     </h2>
                     &nbsp;

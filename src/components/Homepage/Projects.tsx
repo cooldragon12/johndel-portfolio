@@ -1,9 +1,15 @@
+import Card from "./projects/Card";
 
 
 const Projects = () => {
     return (
         <>
-            <h1 className='text-5xl'>Projects</h1>
+            {
+                [1,2,3].map((item, index) => (
+                    <Card key={index} src={'/icons/next.svg'} title={`Project ${index}`} />
+                )
+                )
+            }
         </>
     )
 }

@@ -23,10 +23,10 @@ export default function Landingpage() {
                     <Description />
                 </div>
             </section>
-            <section className='h-screen overflow-hidden flex items-center' id="projects">
+            <section className='h-screen overflow-hidden ' id="projects">
                 <div className=' left-24 absolute h-[70%] w-1/4  z-[-2]'><div className='w-[4rem] h-[4rem] text-[4rem] text-slate-100 font-bold  lg:left-4 lg:top-1/2 sticky'>Projects</div></div>
 
-                <Projects/>
+                {/* <Projects/> */}
             </section>
             <section className='h-screen overflow-hidden flex items-center' id="contact">
 
