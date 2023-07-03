@@ -1,26 +1,16 @@
+"use client"
+import FlatCard from "./description/TextCard";
 
 const Description = () => {
     return (
         <>
-            <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between lg:items-start lg:px-20 lg:py-20">
-                <div className="flex flex-col justify-center items-center lg:items-start">
-                    <h1 className="text-4xl font-bold text-center lg:text-left">Description</h1>
-                    <p className="text-center lg:text-left">I am a student at the University of Washington studying Informatics. I am interested in the intersection of technology and business. I am currently looking for a summer 2022 internship.</p>
-                </div>
-                <div className="flex flex-col justify-center items-center lg:items-start">
-                    <h1 className="text-4xl font-bold text-center lg:text-left">Skills</h1>
-                    <p className="text-center lg:text-left">I have experience with React, Next.js, Typescript, Javascript, HTML, CSS, and Python</p>
-                </div>
+            <div className="gap-6 flex flex-col lg:flex-row justify-center items-center lg:justify-between lg:items-start lg:px-20 lg:py-20">
+                <FlatCard  title="About Me" description="My full name is Johndel Encabo, I am currently pursuing a degree in Computer Science with a specialization in Intelligent Systems, I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills."/>
+                <FlatCard title="Skills" description="I have experience with React, Next.js, Typescript, Javascript, HTML, CSS, and Python"/>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between lg:items-start lg:px-20 lg:py-20">
-                <div className="flex flex-col justify-center items-center lg:items-start">
-                    <h1 className="text-4xl font-bold text-center lg:text-left">Interests</h1>
-                    <p className="text-center lg:text-left">I am interested in web development, data science, and machine learning.</p>
-                </div>
-                <div className="flex flex-col justify-center items-center lg:items-start">
-                    <h1 className="text-4xl font-bold text-center lg:text-left">Hobbies</h1>
-                    <p className="text-center lg:text-left">I enjoy playing video games, watching anime, and Photography.</p>
-                </div>
+            <div className="gap-6 flex flex-col lg:flex-row justify-center items-center lg:justify-between lg:items-start lg:px-20 lg:py-20">
+                <FlatCard title="Interests" description="I am interested in web development, data science, and machine learning."/>
+                <FlatCard title="Hobbies" description="I enjoy playing video game, watching anime, and photography"/>
             </div>
         </>
     )

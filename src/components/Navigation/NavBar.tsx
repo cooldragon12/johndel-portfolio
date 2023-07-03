@@ -6,12 +6,11 @@ import { useRouter } from "next/navigation";
 
 const NavItem = ({ href, children }: { href: string; children: React.ReactNode }) => {
     const { scrollYProgress } = useScroll();
-    const y = useTransform(scrollYProgress, [0, 1], [500, -100]);
+    const y = useTransform(scrollYProgress, [0, 1], [450, -50]);
     const router = useRouter();
     return(
         <motion.li
             style={{y:y}}
-
             className={`group flex flex-col justify-end items-end opacity-60 active:opacity-100 hover:opacity-100`}
         >
             <Link className="group-hover:text-[3rem] text-[2rem] transition-all duration-50 ease-in-out" href={href}>{children}</Link>
