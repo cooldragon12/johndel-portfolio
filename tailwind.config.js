@@ -6,7 +6,12 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    
     extend: {
+      screens: {
+        xs: '475px'
+        
+      },
       colors: {
         'accent-1': '#333',
         'primary':'rgb(var(--color-primary))',
@@ -27,7 +32,8 @@ module.exports = {
       },
       animation:{
         blinker: 'blinker 1s linear infinite'
-      }
+      },
+
     },
   },
   plugins: [],

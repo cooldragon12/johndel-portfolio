@@ -8,7 +8,7 @@ const BannerSection = () => {
 
     return (
         <>
-            <div className="m-0 select-none  w-3/4 h-screen flex md:flex-col sm:flex-col lg:flex-row  justify-center items-center">
+            <div className="m-0 select-none w-full lg:w-3/4 h-screen flex  xs:flex-col lg:flex-row  justify-center items-center">
                 <Introduction/>
             </div>
         </>
