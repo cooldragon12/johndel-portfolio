@@ -85,7 +85,7 @@ const Introduction = () => {
     return (
         <>
             <div id="my-image" className="m-3 translate-y-[-150px] opacity-0 rounded-full overflow-hidden w-[17rem] h-[17rem] flex items-center">
-                <Image src={MyImage} alt="My Image" width={700} height={800} />
+                <Image priority src={MyImage} alt="My Image" width={700} height={800} />
             </div>
             <div id="my-intro" className="m-3 translate-x-[-100px]">
                 <h1 className="text-[2rem] lg:text-[3rem] text-center font-normal leading-[3.5rem] ">

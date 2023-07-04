@@ -41,9 +41,9 @@ const Contact = () => {
             <div className="flex flex-col justify-center items-start">
                 {
                     links.map((link, index) => (
-                        <div className="flex font-semibold items-center" key={index}>
-                            <SocialIcon url={link.url} key={index} className="m-2" target="_blank" fgColor="#fff" style={{ height: 50, width: 50 }} />
-                            <TextBlockTransition  key={index}  color="#424242" delay={0.3} isView >{link.name}</TextBlockTransition>
+                        <div className="flex font-semibold items-center" key={link.name+index}>
+                            <SocialIcon url={link.url}  className="m-2" target="_blank" fgColor="#fff" style={{ height: 50, width: 50 }} />
+                            <TextBlockTransition    color="#424242" delay={0.3} isView >{link.name}</TextBlockTransition>
                         </div>
                     ))
                 }
