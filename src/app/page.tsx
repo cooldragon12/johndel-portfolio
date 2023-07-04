@@ -1,5 +1,6 @@
 
 import BannerSection from '@/components/Homepage/Banner'
+import Contact from '@/components/Homepage/Contact'
 import Description from '@/components/Homepage/Description'
 import Projects from '@/components/Homepage/Projects'
 import NavBar from '@/components/Navigation/NavBar'
@@ -39,12 +40,14 @@ export default function Landingpage() {
                 </div>
                 <Projects />
             </section>
-            <section className='h-screen overflow-hidden flex items-center' id="contact">
-
+            <section className='h-screen overflow-hidden flex items-center justify-center' id="contact">
                 <div className='left-0 lg:left-24 absolute w-full h-[70%] lg:w-1/4  z-[-1]'>
                     <div className='w-full h-[4rem] text-[4rem] text-slate-100 font-bold top-1/4 text-center lg:left-4 lg:top-1/2 sticky'>
                         Contact
                     </div>
+                </div>
+                <div className='flex h-fit w-fit  bg-neutral-100 rounded-lg p-7 gap-7 flex-col lg:flex-row'>
+                    <Contact/>
                 </div>
             </section>
         </>

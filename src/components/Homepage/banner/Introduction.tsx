@@ -104,7 +104,7 @@ const Introduction = () => {
                         exit={{ opacity: 0 }}
                         id="identity" className="w-0  bg-primary text-white overflow-hidden">
                         <motion.div className="text-[1.5rem] lg:text-[2rem] text-center font-semibold w-[12em] lg:w-[11em] m-0">
-                            <Typewriter text={["Python Developer","Django Developer", "React Developer", "Full Stack Developer"]} duration={4000} speed={50}/>
+                            <Typewriter text={["Python Developer","Django Developer", "React Developer", "Full Stack Developer"]} duration={2500} speed={50}/>
                             <motion.span id="blinker-inside" className="animate-blinker bg-white">&nbsp;</motion.span>
                         </motion.div>
                         
