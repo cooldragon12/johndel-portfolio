@@ -5,7 +5,10 @@ import Typewriter from "../util/Typewriter"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 
-const getLinks = () => {
+
+const Contact = () => {
+    const ref = useRef(null)
+    const inView = useInView(ref)
     const links = [
         {
             name: "in/johndel-encabo",
@@ -20,13 +23,6 @@ const getLinks = () => {
             url: "mailto:johndelencabo@gmail.com"
         }
     ]
-    return links
-}
-
-const Contact = () => {
-    const ref = useRef(null)
-    const links = getLinks()
-    const inView = useInView(ref)
     return(
         <>
             <div ref={ref} className="flex flex-col justify-center items-center">

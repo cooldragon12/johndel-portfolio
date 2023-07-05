@@ -21,7 +21,7 @@ const Introduction = () => {
                 {
                     duration: 0.3,
                     type: "decay",
-                    delay: 1,
+                    delay: 0.6,
                 }
             ],
             [
@@ -44,7 +44,7 @@ const Introduction = () => {
                 },
                 {
                     duration: 0.6,
-                    delay: 2.4,
+                    delay: 1.6,
                     type: "inertia"
                 }
             ],
@@ -62,7 +62,7 @@ const Introduction = () => {
                 {
                     duration: 0.8,
                     type: "inertia",
-                    delay: 2.6,
+                    delay: 1.8,
 
                 } // Settings of Animation
             ],

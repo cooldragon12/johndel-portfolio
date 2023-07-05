@@ -1,16 +1,16 @@
 "use client";
 import Image from "next/image"
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 
 
-const Card = ({src, title}:{src: string, title:string})=>{
-    const ref = useRef(null);
-    
-    const [isHover, setIsHover] = useState(false);
-    return(
+
+const Card = ({ src, title }: { src: string, title: string }) => {
+
+    return (
         <>
-        
+            <div className="card__image h-1/4 w-full flex justify-center items-center" >
+                <Image width={500} height={500} src={src} alt={title} />
+
+            </div>
         </>
     )
 }
