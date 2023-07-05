@@ -24,7 +24,7 @@ const NavItem = ({ href, children, active }: { href: string; children: React.Rea
                 <span className={`${active?"w-full":"w-[1rem]"} group-hover:w-full  h-1 bg-slate-700 transition-all`}/>
             </motion.li>
             <motion.li
-                className={`group lg:hidden flex flex-col justify-end items-end opacity-60 active:opacity-100 hover:opacity-100`}
+                className={`${active?"opacity-100":"opacity-60"} group lg:hidden flex flex-col justify-end items-end active:opacity-100 hover:opacity-100`}
             >
                 <Link className={`${active?"text-[2rem]":"text-[1.5rem]"} group-hover:text-[2rem] transition-all duration-50 ease-in-out`} href={href}>{children}</Link>
                 <span className={`${active?"w-full":"w-[1rem]"} group-hover:w-full  h-1 bg-slate-700 transition-all`}/>
