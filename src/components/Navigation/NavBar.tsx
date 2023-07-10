@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useScroll, motion, useTransform } from "framer-motion";
-import { useRouter } from "next/navigation";
 import { useContext, useEffect } from "react";
 import { SectionAnchorContext } from "@/providers/SectionAnchor";
 
@@ -11,7 +10,7 @@ const NavItem = ({ href, children, active }: { href: string; children: React.Rea
     const y = useTransform(scrollYProgress, [0, 1], [450, -50]);
 
     useEffect(() => {
-        console.log(href, ":", active)
+        
 
     }, [active])
     return (
@@ -37,7 +36,7 @@ const NavBar = () => {
     const { inViewBanner, inViewDescription, inViewProject, inViewContact } = useContext(SectionAnchorContext)
     return (
         <>
-            <ul className="select-none list-none items-center lg:items-end flex flex-row lg:flex-col lg:gap-2 gap-3">
+            <ul className="mix-blend-difference select-none list-none items-center lg:items-end flex flex-row lg:flex-col lg:gap-2 gap-3">
                 <NavItem active={inViewBanner} href="#banner">Home</NavItem>
                 <NavItem active={inViewDescription} href="#description">About</NavItem>
                 <NavItem active={inViewProject} href="#projects">Projects</NavItem>

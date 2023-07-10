@@ -2,11 +2,33 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, stagger, useInView } from "framer-motion";
 import Card from "./projects/Card";
+type Project = {
+    title: string;
+    description: string;
+    src: string;
+}
+const projects = [
+    {
+        title: "AutomataFlow",
+        description: "Description",
+        src: "/icons/next.svg"
+    },
+    {
+        title: "Flueriste | Flower Delivery App",
+        description: "Description",
+        src: "/icons/next.svg"
+    },
+    {
+        title: "Valorant Text/Voice Chat Sentiment Analysis",
+        description: "Description",
+        src: "/icons/next.svg"
+    },
+]
 
 const Projects = () => {
     const [isHover, setIsHover] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [currentHover, setCurrentHover] = useState(0);
+    const [currentHover, setCurrentHover] = useState<Project>();
     const stag = stagger(0.2);
     const ref = useRef(null);
     const inView = useInView(ref, { once: true })
@@ -16,9 +38,9 @@ const Projects = () => {
         }
     }, [inView])
     return (
-        <div className="w-full relative flex lg:flex-row flex-col justify-center items-center gap-5" ref={ref}>
+        <div className="w-full relative flex lg:flex-row flex-col justify-center items-center gap-2 flex-wrap" ref={ref}>
             {
-                [1, 2, 3].map((item, index) => (
+                projects.map((item, index) => (
                     <motion.div
                         key={index}
                         onHoverStart={(e) => { setIsHover(true), setCurrentHover(item) }}
@@ -28,8 +50,8 @@ const Projects = () => {
                             // Close to the edge of mouse
                             setMousePosition({ x: pageX, y: pageY });
                         }}
-                        className="card opacity-0 -translate-x-1/2 cursor-pointer relative">
-                        <Card src="/icons/next.svg" title="Title" />
+                        className="card hover:bg-secondary hover:text-background transition-colors border border-spacing-1 border-secondary p-10 opacity-0 -translate-x-1/2 cursor-pointer relative">
+                        <Card src={item.src} title={item.title} />
                     </motion.div>
                 )
                 )
@@ -42,12 +64,12 @@ const Projects = () => {
                     visibility: isHover ? "visible" : "hidden",
                     x: mousePosition.x - 900,
                     y: mousePosition.y - 2400,
-                    transition: "opacity 0.25s ease-in-out, visibility 0.25s ease-in-out",
+                    transition: "opacity 0.25s ease-in-out, visibility 0.25s ease-in-out, transform 0.15s ease-out",
                 }}
-                className="hover-card w-1/4 h-40 bg-[#f3f3f3]"
+                className="hover-card w-1/4 h-40 bg-background shadow-sm shadow-primary flex justify-center items-center"
 
             >
-                <h1>{currentHover}</h1>
+                <h1>{currentHover?.title}</h1>
             </motion.div>
         </div>
     )

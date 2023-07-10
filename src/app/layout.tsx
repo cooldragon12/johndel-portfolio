@@ -1,6 +1,6 @@
 import NavBar from '@/components/Navigation/NavBar'
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import { Poppins} from 'next/font/google'
 import { SectionAnchorProvider } from '@/providers/SectionAnchor'
 
 const poppins = Poppins({
@@ -21,13 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        
         {/* <header>
           <ToggleTheme/>
         </header> */}
         <SectionAnchorProvider>
           {children}
         </SectionAnchorProvider>
+        
       </body>
     </html>
   )

@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
- background-color: #1d1d1d;
+ background-color: rgb(var(--color-secondary));
  width: 2px;
  height: 7px;
  border-radius: 16px;
 }
 
 ::-webkit-scrollbar-track {
- background: #f1f1f1;
+ background: rgb(var(--foreground-rgb));
 }
 
 ::-webkit-scrollbar-thumb {
- background: #131313;
+ background: rgb(var(--color-primary));
  -webkit-transition: background 0.2s ease-in;
  transition: background 0.2s ease-in;
 }
@@ -23,12 +23,14 @@
  background: rgb(var(--color-secondary));
 }
 
-:root {
- --foreground-rgb: 0, 0, 0;
- --background-rgb: 241 241 241;
- --color-primary: 28 28 28;
- --color-secondary: 29 29 29;
- --color-tertiary: 66 66 66;
+@layer base {
+ :root {
+  --foreground-rgb: 1 1 1;
+  --background-rgb: 241 241 241;
+  --color-primary: 28 28 28;
+  --color-secondary: 29 29 29;
+  --color-tertiary: 66 66 66;
+ }
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -40,10 +42,18 @@
 } */
 * {
  scroll-behavior: smooth !important;
+ 
 }
 body {
  border: rgb(var(--color-secondary)) 1px solid;
  color: rgb(var(--color-primary));
  background-color: rgb(var(--background-rgb));
  margin: 1% 1%;
+ scroll-snap-type: mandatory;
+  
+}
+.pattern-background {
+  opacity: 0.05;
+  background-image:  linear-gradient(#191919 1px, transparent 1px), linear-gradient(to right, rgb(var(--color-secondary)) 1px, #ffffff00 1px);
+  background-size: 25px 25px;
 }

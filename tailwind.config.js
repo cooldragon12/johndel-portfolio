@@ -12,10 +12,10 @@ module.exports = {
    },
    colors: {
     "accent-1": "#333",
-    primary: "rgb(var(--color-primary))",
-    secondary: "rgb(var(--color-secondary))",
-    tertiary: "rgb(var(--color-tertiary))",
-    background: "rgb(var(--background-rgb))",
+    primary: "rgb(var(--color-primary) / <alpha-value>)",
+    secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+    tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
+    background: "rgb(var(--background-rgb) / <alpha-value>)",
    },
    keyframes: {
     blinker: {

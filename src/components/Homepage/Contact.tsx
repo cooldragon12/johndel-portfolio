@@ -31,7 +31,7 @@ const Contact = () => {
                         inView ? <Typewriter speed={50} duration={100} text="Get in touch"/>:<></>
 
                     }
-                    <div className="animate-blinker bg-black">_</div>
+                    <div className="animate-blinker bg-primary">_</div>
                 </div>
             </div>
             <div className="flex flex-col justify-center items-start">
