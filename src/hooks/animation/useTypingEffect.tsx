@@ -11,10 +11,6 @@ const useTypingEffect = (delay:number) => {
   const [textState, setTextState] = useState("");
   const [isDone, setIsDone] = useState(false);
 
-  // useEffect(() => {
-  //   if (isDone) {setIsDone(false); setTextState("");};
-  //   setRawText(text);
-  // }, [text, delay]);
 
   useEffect(() => {
     if (isDone) {setIsDone(false); setTextState("");};
@@ -31,22 +27,6 @@ const useTypingEffect = (delay:number) => {
       }
     }, delay);
     
-    // const durationTimeout = setTimeout(() => {
-    //   if (isGoingBack) {
-    //     let count = textArr.length - 1;
-    //     const interval = setInterval(() => {
-    //       if (count === 0) {
-    //         setTextState(prev => prev);
-    //         setIsDone(true);
-    //         clearInterval(interval);
-    //       } else if (count > 0) {
-    //         setTextState(prev => prev.slice(0, -1));
-    //         count--;
-    //       }
-    //     })
-    //   }
-      
-    // }, duration)
     return () => clearInterval(interval);
   }, [rawText]);
 

@@ -51,7 +51,7 @@ const Projects = () => {
                             setMousePosition({ x: pageX, y: pageY });
                         }}
                         className="card hover:bg-secondary hover:text-background transition-colors border border-spacing-1 border-secondary p-10 opacity-0 -translate-x-1/2 cursor-pointer relative">
-                        <Card src={item.src} title={item.title} />
+                        <Card src={item.src} title={item.title} description="" image_src="" />
                     </motion.div>
                 )
                 )
