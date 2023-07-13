@@ -27,7 +27,9 @@ export default function Landingpage() {
                     </div>
                 </div>
                 <BackgroundPattern/>
-                <BannerSection />
+                <div className="m-0 select-none w-full lg:w-3/4 h-screen flex  xs:flex-col lg:flex-row  justify-center items-center">
+                    <BannerSection />
+                </div>
             </section>
             <section ref={description} className=' h-screen overflow-hidden flex-col lg:flex-row flex justify-center items-center lg:px-5 snap-y' id="description">
                 <div className='left-0 lg:left-24 absolute w-full h-[70%] lg:w-1/4  z-[-3]' >
@@ -35,7 +37,7 @@ export default function Landingpage() {
                         About
                     </div>
                 </div>
-                <div className='w-[90%] h-[50%] flex justify-center items-end flex-wrap'>
+                <div className='lg:w-3/4 h-screen flex justify-center items-center flex-wrap'>
                     <Description />
                 </div>
             </section>

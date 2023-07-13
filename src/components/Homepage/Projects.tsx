@@ -71,7 +71,7 @@ const Projects = () => {
                     visibility: isHover ? "visible" : "hidden",
                     x: mousePosition.x - 900,
                     y: mousePosition.y - 2350,
-                    transition: "opacity 0.25s ease-in-out, visibility 0.25s ease-in-out, transform 0.15s ease-out, width 0.15s ease-out",
+                    transition: "opacity 0.25s ease-in-out, visibility 0.25s ease-in-out, transform 0.1s ease-out",
                 }}
                 className="hover-card w-[30vw] h-[30vh] bg-background shadow-sm shadow-primary flex justify-center items-center "
 
