@@ -52,6 +52,8 @@ const Projects = () => {
                         key={index}
                         onHoverStart={(e) => { setIsHover(true), setCurrentHover(item) }}
                         onHoverEnd={(e) => { setIsHover(false) }}
+                        onFocus={(e) => { setIsHover(true), setCurrentHover(item) }}
+                        onBlur={(e) => { setIsHover(false) }}
                         onMouseMove={(e) => {
                             const { pageX, pageY } = e;
                             // Close to the edge of mouse
