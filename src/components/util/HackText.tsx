@@ -25,11 +25,15 @@ function HackText(props: HackTextProps){
                 ).join("");
             setText(initialT);
             
-            if (ite >=  defaultLength! ) 
+            if (ite >=  defaultLength! ) {
                 clearInterval(interval)
+                console.log("Clearning the interval")
+            }
             ite +=  1 / props.duration ;
         }, props.delay);
-        return () => clearInterval(interval)
+        return () =>{
+            console.log("Clearning the interval")
+            clearInterval(interval)}
     },[props.children])
     return <div {...props}>{text}</div>
     

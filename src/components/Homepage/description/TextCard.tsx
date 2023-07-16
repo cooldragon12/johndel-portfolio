@@ -18,8 +18,8 @@ const FlatCard = ({ title, description }: FlatCardProps) => {
 
     return (
         <>
-            <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold text-center lg:text-left">{title}</h1></TextBlockTransition>
-            <TextBlockTransition isView delay={stag} color="#424242"><p className="text-center lg:text-left">{description}</p></TextBlockTransition>
+            <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold">{title}</h1></TextBlockTransition>
+            <TextBlockTransition isView delay={stag} color="#424242"><p >{description}</p></TextBlockTransition>
         </>
     )
 }

@@ -47,7 +47,9 @@ export default function Landingpage() {
                         Projects
                     </div>
                 </div>
-                <Projects />
+                <div className='lg:w-3/4 h-screen flex justify-center items-center flex-wrap'>
+                    <Projects />
+                </div>
             </section>
             <section ref={contact} className='h-screen overflow-hidden flex items-center px-5 justify-center snap-y' id="contact">
                 <div className='left-0 lg:left-24 absolute w-full h-[70%] lg:w-1/4  z-[-1]'>

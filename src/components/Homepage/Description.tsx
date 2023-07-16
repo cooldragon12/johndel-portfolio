@@ -17,13 +17,13 @@ const Description = () => {
     }, [inView])
     return (
         <>
-            <div className="grid lg:grid-cols-2 lg:grid-rows-2">
-                <div className="flex flex-col justify-center items-center lg:items-start border border-primary px-8 py-5 border-collapse">
+            <div className="grid grid-cols-3 grid-rows-2">
+                <div className="col-span-3 lg:col-span-2 w-[100%] flex flex-col justify-center items-start  border border-primary px-8 py-5 border-collapse">
                     <FlatCard title='"About Me"' description="My name is Johndel Encabo, I am currently pursuing a degree in Computer Science with a specialization in Intelligent Systems, I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills. Also, love to explore new technologies." />
                 </div>
-                <div ref={stackRef} className="col-span-1 row-span-2 flex flex-col justify-center items-center lg:items-start border border-primary p-5 border-collapse overflow-hidden">
-                    <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold text-center lg:text-left">Technology Stack</h1></TextBlockTransition>
-                    <ul id="skills" className="flex flex-wrap lg:justify-normal items-center justify-center gap-4 my-4">
+                <div ref={stackRef} className="lg:col-span-1 md:col-span-1  xs:col-span-3 row-span-2 flex flex-col justify-center items-center  border border-primary p-5 border-collapse overflow-hidden">
+                    <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold text-center ">Technology Stack</h1></TextBlockTransition>
+                    <ul id="skills" className="flex flex-wrap items-center justify-center gap-4 my-4">
                         <motion.li onHoverStart={() => setCurrentHover(1)} onHoverEnd={() => setCurrentHover(0)} className="skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
                             <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex transition-opacity ${currentHover === 1 ? "opacity-1" : "opacity-0"}`}>
                                 <span>Python</span>
@@ -63,7 +63,7 @@ const Description = () => {
                     </ul>
                 </div>
         
-                <div className="flex flex-col justify-between items-center lg:items-start border border-primary px-8 py-5 border-collapse">
+                <div className="lg:col-span-2 md:col-span-2 xs:col-span-3 flex flex-col justify-between items-start border border-primary px-8 py-5 border-collapse">
                     <FlatCard title='"Interests"' description="I am interested in web development, data science, and machine learning." />
                     {/* </div> */}
                     {/* <div className="flex flex-col justify-center items-center lg:items-start border border-primary p-5 h-1/4"> */}
