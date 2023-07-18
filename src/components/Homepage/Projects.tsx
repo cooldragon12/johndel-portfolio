@@ -73,7 +73,7 @@ const Projects = () => {
                     zIndex: 1000,
                     opacity: isHover ? 1 : 0,
                     visibility: isHover ? "visible" : "hidden",
-                    x: mousePosition.x - 500,
+                    x: mousePosition.x - 400,
                     y: mousePosition.y - 2450,
                     transition: "opacity 0.25s ease-in-out, visibility 0.25s ease-in-out, transform 0.05s ease-out",
                 }}

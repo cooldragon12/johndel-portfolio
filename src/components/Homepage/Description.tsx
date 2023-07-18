@@ -19,7 +19,9 @@ const Description = () => {
         <>
             <div className="grid grid-cols-3 grid-rows-2">
                 <div className="col-span-3 lg:col-span-2 w-[100%] flex flex-col justify-center items-start  border border-primary px-8 py-5 border-collapse">
-                    <FlatCard title='"About Me"' description="My name is Johndel Encabo, I am currently pursuing a degree in Computer Science with a specialization in Intelligent Systems, I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills. Also, love to explore new technologies." />
+                    <FlatCard title='"About Me"' >
+                        My name is <b>Johndel Encabo</b>, I am currently pursuing a degree in Computer Science with a specialization in Intelligent Systems, I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills. Also, love to explore new technologies.
+                    </FlatCard>
                 </div>
                 <div ref={stackRef} className="lg:col-span-1 md:col-span-1  xs:col-span-3 row-span-2 flex flex-col justify-center items-center  border border-primary p-5 border-collapse overflow-hidden">
                     <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold text-center ">Technology Stack</h1></TextBlockTransition>
@@ -64,10 +66,14 @@ const Description = () => {
                 </div>
         
                 <div className="lg:col-span-2 md:col-span-2 xs:col-span-3 flex flex-col justify-between items-start border border-primary px-8 py-5 border-collapse">
-                    <FlatCard title='"Interests"' description="I am interested in web development, data science, and machine learning." />
+                    <FlatCard title='"Interests"' >
+                     I am interested in web development, data science, and machine learning.
+                    </FlatCard>
                     {/* </div> */}
                     {/* <div className="flex flex-col justify-center items-center lg:items-start border border-primary p-5 h-1/4"> */}
-                    <FlatCard title='"Hobbies"' description="I enjoy playing video game, watching anime, and photography" />
+                    <FlatCard title='"Hobbies"' >
+                        I enjoy playing video game, watching anime, and photography 
+                    </FlatCard>
                 </div>
             </div>
         </>
