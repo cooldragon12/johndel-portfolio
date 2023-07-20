@@ -5,7 +5,6 @@ import { animate, stagger, motion, useInView } from "framer-motion";
 import TextBlockTransition from "../util/TextBlockTransition";
 const stag = stagger(0.2);
 const Description = () => {
-    const [currentHover, setCurrentHover] = useState(0);
     const stackRef = useRef(null);
     const inView = useInView(stackRef, { once: true });
     useEffect(() => {
@@ -20,44 +19,46 @@ const Description = () => {
             <div className="grid grid-cols-3 grid-rows-2">
                 <div className="col-span-3 lg:col-span-2 w-[100%] flex flex-col justify-center items-start  border border-primary px-8 py-5 border-collapse">
                     <FlatCard title='"About Me"' >
-                        My name is <b>Johndel Encabo</b>, I am currently pursuing a degree in Computer Science with a specialization in Intelligent Systems, I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills. Also, love to explore new technologies.
+                        My name is <b>Johndel Encabo</b>, I am currently pursuing a degree in Computer Science with a specialization in Intelligent Systems, I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills. Also, love to explore new technologies. 
+
+                        I believe that simplicity is the key to achive a best solution.
                     </FlatCard>
                 </div>
                 <div ref={stackRef} className="lg:col-span-1 md:col-span-1  xs:col-span-3 row-span-2 flex flex-col justify-center items-center  border border-primary p-5 border-collapse overflow-hidden">
                     <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold text-center ">Technology Stack</h1></TextBlockTransition>
                     <ul id="skills" className="flex flex-wrap items-center justify-center gap-4 my-4">
-                        <motion.li onHoverStart={() => setCurrentHover(1)} onHoverEnd={() => setCurrentHover(0)} className="skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex transition-opacity ${currentHover === 1 ? "opacity-1" : "opacity-0"}`}>
+                        <motion.li  className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
+                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
                                 <span>Python</span>
                             </div>
                             <img className="z-0" alt="Python" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
                         </motion.li>
-                        <motion.li onHoverStart={() => setCurrentHover(2)} onHoverEnd={() => setCurrentHover(0)} className="skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex transition-opacity ${currentHover === 2 ? "opacity-1" : "opacity-0"}`}>
+                        <motion.li className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
+                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
                                 <span>Django</span>
                             </div>
                             <img className="z-0" alt="Django" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
                         </motion.li>
-                        <motion.li onHoverStart={() => setCurrentHover(3)} onHoverEnd={() => setCurrentHover(0)} className="skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex transition-opacity ${currentHover === 3 ? "opacity-1" : "opacity-0"}`}>
+                        <motion.li  className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
+                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
                                 <span>Postgres</span>
                             </div>
                             <img className="z-0" alt="PostGreSQl" width="40px" src="/icons/PostgresSQL.svg" />
                         </motion.li>
-                        <motion.li onHoverStart={() => setCurrentHover(4)} onHoverEnd={() => setCurrentHover(0)} className="skill relative translate-x-[80px] flex items-center opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex transition-opacity ${currentHover === 4 ? "opacity-1" : "opacity-0"}`}>
+                        <motion.li className="group skill relative translate-x-[80px] flex items-center opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
+                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
                                 <span>Next JS</span>
                             </div>
                             <img className="z-0" alt="NextJs" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
                         </motion.li>
-                        <motion.li onHoverStart={() => setCurrentHover(5)} onHoverEnd={() => setCurrentHover(0)} className="skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex transition-opacity ${currentHover === 5 ? "opacity-1" : "opacity-0"}`}>
+                        <motion.li className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
+                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
                                 <span>React</span>
                             </div>
                             <img className="z-0" alt="React" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                         </motion.li>
-                        <motion.li onHoverStart={() => setCurrentHover(6)} onHoverEnd={() => setCurrentHover(0)} className="skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex transition-opacity ${currentHover === 6 ? "opacity-1" : "opacity-0"}`}>
+                        <motion.li  className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
+                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
                                 <span>Tailwind</span>
                             </div>
                             <img className="z-0" alt="Tailwind" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />

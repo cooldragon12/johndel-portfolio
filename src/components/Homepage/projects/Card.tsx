@@ -9,11 +9,12 @@ const Card = ({ src, image_src, title, description }: { src: string,image_src:st
 
     return (
         <>
-            <Link href="" className="card__image h-1/4 w-full flex justify-center items-center" >
+            <Link href={src} className="card__image h-1/4 w-full flex justify-center items-center relative" >
+                
                 {/* <Image width={500} height={500} src={src} alt={title} /> */}
-                <div className="">
+                <div>
                     <div>
-                        <HackText duration={2} delay={100} defaultValue={title} className="text-xl font-bold transition-all">{title}</HackText>
+                        <HackText duration={1} delay={100} defaultValue={title} className="text-xl font-bold transition-all">{title}</HackText>
                     </div>
                     <div className="description">
                         <p>{description}</p>

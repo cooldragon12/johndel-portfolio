@@ -35,7 +35,7 @@ const projects:Project[] = [
 const Projects = () => {
     const [isHover, setIsHover] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    // const [currentHover, setCurrentHover] = useState<Project>({} as Project);
+    const [currentHover, setCurrentHover] = useState<Project>({} as Project);
     const stag = stagger(0.2);
     const ref = useRef(null);
     const inView = useInView(ref, { once: true })
@@ -77,8 +77,13 @@ const Projects = () => {
                     y: mousePosition.y - 2450,
                     transition: "opacity 0.25s ease-in-out, visibility 0.25s ease-in-out, transform 0.05s ease-out",
                 }}
-                className="hover-card w-[10vw] h-[10vh] bg-primary shadow-sm shadow-primary flex justify-center items-center "
-            />
+                className="hover-card min-w-[30vh] min-h-[10vh] bg-primary shadow-md shadow-primary flex justify-center items-center "
+            >
+                <div className=" p-5 border border-background border-dashed">
+                    <img width={400} height={200} src={currentHover.src} alt={currentHover.title} />
+                    <h1 className="text-2xl font-bold text-center text-background tracking-wide">{"<< Click it!! >>"}</h1>
+                </div>
+            </motion.div>
             
         </div>
     )
