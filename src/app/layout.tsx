@@ -5,7 +5,7 @@ import { SectionAnchorProvider } from '@/providers/SectionAnchor'
 
 const poppins = Poppins({
   weight: ['200','400', '700', '900'],
-  subsets: ['latin'],
+  subsets: ['latin-ext'],
 })
 
 export const metadata = {

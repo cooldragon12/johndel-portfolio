@@ -26,29 +26,34 @@ export default function Landingpage() {
                         Me
                     </div>
                 </div>
-                <BackgroundPattern/>
+                <BackgroundPattern />
                 <div className="m-0 select-none w-full lg:w-3/4 h-screen flex  xs:flex-col lg:flex-row  justify-center items-center">
                     <BannerSection />
                 </div>
             </section>
-            <section ref={description} className=' h-screen overflow-hidden flex-col lg:flex-row flex justify-center items-center lg:px-5 snap-y' id="description">
-                <div className='left-0 lg:left-24 absolute w-full h-[70%] lg:w-1/4  z-[-3]' >
-                    <div className='w-full h-[4rem] text-[3rem] lg:text-[5rem] text-neutral-200 font-bold top-1/4 text-center  lg:left-4 lg:top-1/2 sticky'>
-                        About
+            <section ref={description} className=' h-screen overflow-hidden  snap-y' id="description">
+                <div className='px-24 flex-col lg:block flex justify-center items-center'>
+                    <div className='right-44 absolute w-full h-[70%]   z-[-3]' >
+                        <div className='w-full h-[4rem] text-[3rem] lg:text-[5rem] text-neutral-200 font-bold top-1/4 text-right  right-100 lg:top-1/2 sticky'>
+                            About
+                        </div>
+                    </div>
+                    <div className='lg:w-3/4 w-screen h-screen flex justify-center items-center flex-wrap'>
+                        <Description />
                     </div>
                 </div>
-                <div className='lg:w-3/4 h-screen flex justify-center items-center flex-wrap'>
-                    <Description />
-                </div>
+
             </section>
-            <section ref={project} className='h-screen overflow-hidden flex items-center px-5 snap-y' id="projects">
-                <div className='left-0 lg:left-24 absolute w-full h-[70%] lg:w-1/4  z-[-2]'>
-                    <div className='w-full h-[4rem] text-[3rem] lg:text-[5rem] text-neutral-200 font-bold top-1/4 text-center  lg:left-4 lg:top-1/2 sticky'>
-                        Projects
+            <section ref={project} className='h-screen overflow-hidden px-5 snap-y' id="projects">
+                <div className='px-24'>
+                    <div className='left-0 absolute w-full h-[70%]  z-[-2]'>
+                        <div className='w-full h-[4rem] text-[3rem] lg:text-[5rem] text-neutral-200 font-bold top-1/4 text-center  lg:left-4 lg:top-1/2 sticky'>
+                            Projects
+                        </div>
                     </div>
-                </div>
-                <div className='lg:w-3/4 h-screen flex justify-center items-center flex-wrap'>
-                    <Projects />
+                    <div className='h-screen '>
+                        <Projects />
+                    </div>
                 </div>
             </section>
             <section ref={contact} className='h-screen overflow-hidden flex items-center px-5 justify-center snap-y' id="contact">
