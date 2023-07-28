@@ -14,14 +14,14 @@ const projects:Project[] = [
     {
         title: "AutomataFlow",
         description: "AutomataFlow is a web application that simulates a Deterministic Finite Automaton (DFA) based on a given regular expression problem. It also includes support for Pushdown Automata (PDA) and Context-Free Grammars (CFG). The DFA diagram in the application is interactive, allowing you to validate or simulate input strings.",
-        src: "/icons/next.svg",
+        src: "https://automata-flow.vercel.app/",
         technologies: ["Typescript", "React", "NextJs"],
         colorScheme: ["#2C3E50", "#3498DB","#f2f2f2","#E74C3C"]
     },
     {
         title: "Flueriste | Flower Delivery App",
         description: "Fleuriste is a sophisticated mobile flower delivery application developed using React Native Expo. Designed as part of an educational initiative, it caters to a predominantly female audience. Fleuriste offers an extensive selection of flowers, presented in a refined and elegant manner that complements the products available. The application allows users to peruse the various floral options, choose their desired bouquet, and schedule delivery at their convenience. Additionally, Fleuriste provides a secure and user-friendly payment system, enabling customers to effortlessly complete their transactions.",
-        src: "/icons/next.svg",
+        src: "https://github.com/cooldragon12/flower-delivery",
         technologies: ["Javascript", "React Native", "Expo"],
         colorScheme: ["#FF8B8B","#FFCBCB", "#FFFFFF","#D5FFD1"]
 
@@ -29,11 +29,17 @@ const projects:Project[] = [
     {
         title: "Sentiment Analysis of Valorant Text and Video Chat using Multinomial Logistic Regression",
         description: "This study is about sentiment analysis on text and voice chat toxicity among the players of Valorant Community in the SEA server. Since disruptive behavior became a major problem in Valorant chats, specifically in the SEA server, this study aims to determine the words that most players use for trash-talking, and then determine in which medium most trash-talk comes from.",
-        src: "/icons/next.svg",
+        src: "https://github.com/cooldragon12/valorant-text-voice-chat-sentiment-analysis",
         technologies: ["Python", "Scikit-learn", "Jupyter Notebook"],
         colorScheme: ["#992F1E","#F0BBB2", "#B33623","#ffffff"]
-
     },
+    {
+        title: "Algo Visualizer",
+        description: "Sorting Algorithm Visualization using PyGame",
+        src:"https://github.com/cooldragon12/Algo-Visualizer",
+        technologies: ["Python", "Pygame"],
+        colorScheme: ["#ffffff","#000000"]
+    }
 ]
 
 const Projects = () => {
