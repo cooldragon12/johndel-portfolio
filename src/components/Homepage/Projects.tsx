@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { animate, motion, stagger, useInView } from "framer-motion";
 import Card from "./projects/Card";
 import HoverCard from "./projects/HoverCard";
@@ -50,11 +50,26 @@ const Projects = () => {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true })
     useEffect(() => {
-        animate(".card", { opacity: [0, 1], x: [-600, 0], }, { duration: 0.4, delay: stag })
+        animate(".card", { opacity: [0, 1], y: [-600, 0], }, { duration: 0.4, delay: stag })
     }, [inView])
-    useEffect(() => {
-        console.log(isHover);
-    }, [isHover])
+
+    const handleOnHover = useCallback((item:Project) => {
+        setIsHover(true);
+        setCurrentHover(item);
+    },[])
+
+    const handleHoverEnd = useCallback(() => {
+        setIsHover(false);
+        setCurrentHover({} as Project)
+    },[])
+
+    const handleMouseMove = useCallback((e:any) => {
+        
+        const { clientX, screenY } = e;
+            // Close to the edge of mouse
+        setMousePosition({ x: clientX, y: screenY + 100 });
+        
+    },[])
     return (
         <div className="flex h-full" ref={ref}>
             <div className="flex flex-col h-full gap-1 flex-wrap justify-center">
@@ -62,15 +77,11 @@ const Projects = () => {
                 projects.map((item, index) => (
                     <motion.div
                         key={index}
-                        onHoverStart={(e) => { setIsHover(true), setCurrentHover(item) }}
-                        onHoverEnd={(e) => { setIsHover(false), setCurrentHover({} as Project) }}
-                        onFocus={(e) => { setIsHover(true) }}
-                        onBlur={(e) => { setIsHover(false) }}
-                        onMouseMove={(e) => {
-                            const { clientX, screenY } = e;
-                            // Close to the edge of mouse
-                            setMousePosition({ x: clientX, y: screenY + 100 });
-                        }}
+                        onHoverStart={(e) => handleOnHover(item)}
+                        onHoverEnd={(e) => handleHoverEnd()}
+                        onFocus={(e) => handleOnHover(item)}
+                        onBlur={(e) => handleHoverEnd()}
+                        onMouseMove={(e) => handleMouseMove(e)}
                         className="card 
                             bg-background 
                             hover:bg-secondary 
