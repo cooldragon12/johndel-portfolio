@@ -20,7 +20,7 @@ const Card = (props: Card) => {
                 {/* <Image width={500} height={500} src={src} alt={title} /> */}
 
                 <div className="">
-                    <HackText duration={1} delay={100} defaultValue={props.title} className="text-xl font-bold transition-all">{props.title}</HackText>
+                    <HackText duration={1} delay={50} defaultValue={props.title} className="text-xl font-bold transition-all">{props.title}</HackText>
                 </div>
                 <div className="flex gap-2">
                     {

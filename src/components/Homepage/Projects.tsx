@@ -48,7 +48,7 @@ const Projects = () => {
     const [currentHover, setCurrentHover] = useState<Project>({} as Project);
     const stag = stagger(0.2);
     const ref = useRef(null);
-    const inView = useInView(ref, { once: true })
+    const inView = useInView(ref, { once: true,amount: 0.5 })
     useEffect(() => {
         animate(".card", { opacity: [0, 1], y: [-600, 0], }, { duration: 0.4, delay: stag })
     }, [inView])
@@ -83,6 +83,7 @@ const Projects = () => {
                         onBlur={(e) => handleHoverEnd()}
                         onMouseMove={(e) => handleMouseMove(e)}
                         className="card 
+                            overflow-hidden 
                             bg-background 
                             hover:bg-secondary 
                             hover:text-background

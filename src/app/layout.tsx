@@ -2,7 +2,7 @@ import NavBar from '@/components/Navigation/NavBar'
 import './globals.css'
 import { Poppins} from 'next/font/google'
 import { SectionAnchorProvider } from '@/providers/SectionAnchor'
-
+import { Analytics } from '@vercel/analytics/react';
 const poppins = Poppins({
   weight: ['200','400', '700', '900'],
   subsets: ['latin-ext'],
@@ -28,7 +28,7 @@ export default function RootLayout({
         <SectionAnchorProvider>
           {children}
         </SectionAnchorProvider>
-        
+        <Analytics/>
       </body>
     </html>
   )

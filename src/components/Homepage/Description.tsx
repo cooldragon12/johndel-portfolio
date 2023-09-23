@@ -19,8 +19,8 @@ const Description = () => {
             <div className="grid grid-cols-3 grid-rows-2">
                 <div className="col-span-3 lg:col-span-2 w-[100%] flex flex-col justify-center items-start  border border-primary px-8 py-5 border-collapse">
                     <FlatCard title='"About Me"' >
-                        My name is <b>Johndel Encabo</b>, I am currently pursuing a degree in Computer Science with a specialization in Intelligent Systems, I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills. Also, love to explore new technologies. 
-
+                        My name is <b>Johndel Encabo</b>, I am a full-stack developer who is based in the Philippines, I use Django as backend and React or Next JS for frontend. I am currently studying Computer Science with specialization in Intellegience System. I am passionate about developing innovative solutions that leverage the latest technologies and constantly strive to advance my skills. Also, love to explore new technologies. 
+                        Machine learning and data science are my current interests.
                         I believe that simplicity is the key to achive a best solution.
                     </FlatCard>
                 </div>
@@ -68,7 +68,7 @@ const Description = () => {
         
                 <div className="lg:col-span-2 md:col-span-2 xs:col-span-3 flex flex-col justify-between items-start border border-primary px-8 py-5 border-collapse">
                     <FlatCard title='"Interests"' >
-                     I am interested in web development, data science, and machine learning.
+                    My current interest is data science, and machine learning and web development
                     </FlatCard>
                     {/* </div> */}
                     {/* <div className="flex flex-col justify-center items-center lg:items-start border border-primary p-5 h-1/4"> */}
