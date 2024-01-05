@@ -1,5 +1,5 @@
 "use client"
-import HackText from "@/components/util/hack-text";
+import HackText from "../../util/hack-text";
 
 type Project = {
     title: string;
