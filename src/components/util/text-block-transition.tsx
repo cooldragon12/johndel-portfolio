@@ -56,9 +56,9 @@ const TextBlockTransition = ({ children, color, delay, isView=false}:{children:R
     
 
     return (
-        <div style={{width:"fit-content", position:"relative", margin:"0.3rem 0"}} ref={target}>
+        <div className="w-fit relative mx-[0.3rem]" ref={target}>
             <div id="text-cover" className="z-10 w-0 h-full absolute top-0" style={{backgroundColor:color}}/>
-            <div id="text" className="opacity-0">{children}</div>
+            <div id="text" className="opacity-0 md:text-base text-sm">{children}</div>
         </div>
     )
 }

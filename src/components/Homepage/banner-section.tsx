@@ -1,5 +1,5 @@
 "use client"
-import Typewriter from "@/components/util/Typewriter";
+import Typewriter from "@/components/util/typewriter";
 import Image from "next/image";
 import MyImage from "@/assets/personal_photo.jpg"
 import { useEffect } from "react";
@@ -84,7 +84,6 @@ const BannerSection = () => {
     }, [])
     return (
         <>
-            
             <div id="my-image" className="mr-3 my-3 translate-y-[-150px] opacity-0 rounded-full overflow-hidden w-[17rem] h-[17rem] flex items-center">
                 <Image priority src={MyImage} alt="My Image" width={700} height={800} />
             </div>
@@ -92,19 +91,20 @@ const BannerSection = () => {
                 <h1 className="text-[2rem] lg:text-[3rem] text-center font-normal leading-[3.5rem] ">
                     Hello, I am <b>Johndel</b>
                 </h1>
-                <div className="flex lg:flex-row justify-center items-center">
-                    <h2 className="text-[1.5rem] lg:text-[2rem]  lg:text-left font-semibold">
-                        <Typewriter  text="I am a" speed={50} />
-                        <motion.span id="blinker-outside" className="animate-blinker bg-primary">
-                            &nbsp;
-                        </motion.span>
-                    </h2>
-                    <div className="xsm:hidden">&nbsp;</div>
+                <div className="flex lg:flex-row flex-col justify-center items-center">
+                    <div>
+                        <h2 className="text-[1.5rem] lg:text-[2rem]  lg:text-left font-semibold">
+                            <Typewriter  text="I am a" speed={50} />
+                            <motion.span id="blinker-outside" className="animate-blinker bg-primary">
+                                &nbsp;
+                            </motion.span>
+                        </h2>
+                    </div>
                     <motion.div
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        id="identity" className="w-0  bg-primary text-white overflow-hidden">
-                        <motion.div className="text-[1.5rem] lg:text-[2rem] text-center font-semibold w-[12em] lg:w-[11em] m-0">
+                        id="identity" className="flex justify-center items-center bg-primary text-white overflow-hidden">
+                        <motion.div className="text-[1.5rem] lg:text-[2rem] font-semibold w-[15em] md:w-[14.5em] lg:w-[13em] m-0 flex justify-center">
                             <Typewriter text={["Python Developer","Django Developer", "React Developer", "Full Stack Developer"]} duration={2500} speed={50}/>
                             <motion.span id="blinker-inside" className="animate-blinker bg-white">&nbsp;</motion.span>
                         </motion.div>

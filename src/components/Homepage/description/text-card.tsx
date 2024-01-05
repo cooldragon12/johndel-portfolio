@@ -1,6 +1,6 @@
 "use client"
 
-import TextBlockTransition from "@/components/util/TextBlockTransition";
+import TextBlockTransition from "@/components/util/text-block-transition";
 import React, { useEffect } from "react";
 import { stagger } from "framer-motion";
 
@@ -19,7 +19,7 @@ const FlatCard = ({ title, children }: FlatCardProps) => {
     return (
         <>
             <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold">{title}</h1></TextBlockTransition>
-            <TextBlockTransition isView delay={stag} color="#424242"><p >{children}</p></TextBlockTransition>
+            <TextBlockTransition isView delay={stag} color="#424242"><p className="text-sm md:text-base">{children}</p></TextBlockTransition>
         </>
     )
 }

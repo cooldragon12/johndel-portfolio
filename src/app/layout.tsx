@@ -1,4 +1,3 @@
-import NavBar from '@/components/Navigation/NavBar'
 import './globals.css'
 import { Poppins} from 'next/font/google'
 import { SectionAnchorProvider } from '@/providers/SectionAnchor'

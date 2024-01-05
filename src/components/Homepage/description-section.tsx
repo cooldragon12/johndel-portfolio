@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
-import FlatCard from "./description/TextCard";
+import FlatCard from "./description/text-card";
 import { animate, stagger, motion, useInView } from "framer-motion";
-import TextBlockTransition from "../util/TextBlockTransition";
+import TextBlockTransition from "../util/text-block-transition";
 const stag = stagger(0.2);
 const Description = () => {
     const stackRef = useRef(null);
