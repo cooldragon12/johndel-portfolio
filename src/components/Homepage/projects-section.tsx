@@ -1,7 +1,7 @@
 "use client"
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { animate, motion, stagger, useInView } from "framer-motion";
-import Card from "./projects/card";
+import Card from "./projects/cards";
 import { GithubAPI } from "@/types/github_api";
 
 const Projects = () => {
@@ -76,4 +76,4 @@ const Projects = () => {
         </div>
     )
 }
-export default Projects;
+export default Projects as React.FC;

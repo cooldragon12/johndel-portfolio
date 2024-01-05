@@ -1,5 +1,5 @@
 "use client"
-import Typewriter from "../util/typewriter";
+import Typewriter from "../util/type-writer";
 import Image from "next/image";
 import MyImage from "@/assets/personal_photo.jpg"
 import { useEffect } from "react";

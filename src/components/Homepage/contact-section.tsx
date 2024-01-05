@@ -1,7 +1,7 @@
 "use client"
 import { SocialIcon, SocialIconProps } from "react-social-icons"
 import TextBlockTransition from "../util/text-block-transition"
-import Typewriter from "../util/typewriter"
+import Typewriter from "../util/type-writer"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 
