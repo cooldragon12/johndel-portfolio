@@ -1,7 +1,4 @@
 "use client";
-import HackText from "@/components/util/hack-text";
-import Image from "next/image"
-import Link from "next/link";
 import { GithubAPI } from "@/types/github_api";
 import { useEffect, useState } from "react";
 import { generateHash } from "@/utils/generate-hash";

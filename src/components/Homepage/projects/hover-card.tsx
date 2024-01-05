@@ -1,6 +1,5 @@
 "use client"
 import HackText from "@/components/util/hack-text";
-import { useEffect, useRef } from "react";
 
 type Project = {
     title: string;
