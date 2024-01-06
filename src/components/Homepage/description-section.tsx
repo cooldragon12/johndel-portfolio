@@ -1,12 +1,17 @@
 "use client"
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, } from "react";
 import FlatCard from "./description/text-card";
-import { animate, stagger, motion, useInView } from "framer-motion";
+import { animate, stagger,  useInView } from "framer-motion";
+import IconCard from "./description/icon-card";
 import TextBlockTransition from "../util/text-block-transition";
+import { languagesUse } from "@/utils/language-use";
 const stag = stagger(0.2);
+
+
 const Description = () => {
     const stackRef = useRef(null);
     const inView = useInView(stackRef, { once: true });
+    const languages = languagesUse;
     useEffect(() => {
         animate(
             ".skill",
@@ -24,49 +29,17 @@ const Description = () => {
                         I believe that simplicity is the key to achive a best solution.
                     </FlatCard>
                 </div>
-                <div ref={stackRef} className="lg:col-span-1 md:col-span-1  xs:col-span-3 row-span-2 flex flex-col justify-center items-center  border border-primary p-5 border-collapse overflow-hidden">
+                <div ref={stackRef} className="lg:col-span-1 md:col-span-1  xs:col-span-3 row-span-2 flex flex-col justify-center items-center  border border-primary p-5 border-collapse ">
                     <TextBlockTransition isView delay={stag} color="#424242" ><h1 className="text-3xl font-bold text-center ">Technology Stack</h1></TextBlockTransition>
-                    <ul id="skills" className="flex flex-wrap items-center justify-center gap-4 my-4">
-                        <motion.li  className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
-                                <span>Python</span>
-                            </div>
-                            <img className="z-0" alt="Python" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                        </motion.li>
-                        <motion.li className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
-                                <span>Django</span>
-                            </div>
-                            <img className="z-0" alt="Django" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-                        </motion.li>
-                        <motion.li  className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
-                                <span>Postgres</span>
-                            </div>
-                            <img className="z-0" alt="PostGreSQl" width="40px" src="/icons/PostgresSQL.svg" />
-                        </motion.li>
-                        <motion.li className="group skill relative translate-x-[80px] flex items-center opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
-                                <span>Next JS</span>
-                            </div>
-                            <img className="z-0" alt="NextJs" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
-                        </motion.li>
-                        <motion.li className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
-                                <span>React</span>
-                            </div>
-                            <img className="z-0" alt="React" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                        </motion.li>
-                        <motion.li  className="group skill relative translate-x-[80px] opacity-0 font-semibold bg-gray-300 p-5 rounded-md cursor-pointer">
-                            <div className={` items-center gap-2 absolute top-0 left-0 w-full h-full z-30 backdrop-blur-md  justify-center flex group-hover:opacity-100 transition-all opacity-0`}>
-                                <span>Tailwind</span>
-                            </div>
-                            <img className="z-0" alt="Tailwind" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
-                        </motion.li>
+                    <ul id="skills" className="flex flex-wrap items-center justify-center md:gap-4 gap-1 my-4">
+                        {
+                            languages.map((language, index) => (
+                                <IconCard key={index} name={language.name} icon={language.icon} color={language.color} />
+                            ))
+                        }
                     </ul>
                 </div>
-        
-                <div className="lg:col-span-2 md:col-span-2 xs:col-span-3 flex flex-col justify-between items-start border border-primary px-8 py-5 border-collapse">
+                <div className="lg:col-span-2 md:col-span-2 xs:col-span-3 flex flex-col lg:justify-between items-start border border-primary px-8 py-5 border-collapse">
                     <FlatCard title='"Interests"' >
                     My current interest is data science, and machine learning and web development
                     </FlatCard>

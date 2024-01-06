@@ -38,11 +38,11 @@ const Projects = () => {
     },[])
 
     return (
-        <div className="flex lg:m-7 my-4" ref={ref}>
-            <div className="flex flex-col md:flex-row gap-2 md:flex-wrap ">
+        <div className="flex lg:m-7 my-4 h-full" ref={ref}>
+            <div className="flex flex-col md:flex-row gap-2 md:flex-wrap justify-center ">
             {
                 isLoaded? projects.filter((d)=> !d.fork).map((item, index) => (
-                    <motion.div key={index} className="card">
+                    <motion.div key={index} initial="hidden" className="card">
                         <Card  {...item}/>
                     </motion.div>
                 )): <motion.div className="card">

@@ -31,38 +31,38 @@ export default function Landingpage() {
                     <BannerSection />
                 </div>
             </section>
-            <section ref={description} className=' h-screen overflow-hidden  snap-y' id="description">
+            <section ref={description} className='h-fit lg:h-screen overflow-hidden  snap-y my-6' id="description">
                 <div className='px-24 flex-col lg:block flex justify-center items-center'>
                     <div className='right-44 absolute w-full h-[70%]   z-[-3]' >
                         <div className='w-full h-[4rem] text-[3rem] lg:text-[5rem] text-neutral-200 font-bold top-1/4 text-right  right-100 lg:top-1/2 sticky'>
                             About
                         </div>
                     </div>
-                    <div className='lg:w-3/4 w-screen h-screen flex justify-center items-center flex-wrap'>
+                    <div className='lg:w-3/4 w-screen lg:h-screen h-fit flex justify-center items-center flex-wrap'>
                         <Description />
                     </div>
                 </div>
 
             </section>
-            <section ref={project} className='overflow-hidden lg:px-5 snap-y' id="projects">
-                <div className='lg:px-24 px-2 max-h-fit'>
-                    <div className='left-0 absolute w-full h-[70%] z-[-2]'>
+            <section ref={project} className='overflow-hidden my-4 snap-y h-fit' id="projects">
+                <div className='lg:p-24 p-2 h-fit border-solid border-t-2'>
+                    <div className='left-0 absolute w-full h-[100%] z-[-2]'>
                         <div className='w-full h-[4rem] text-[3rem] lg:text-[5rem] text-neutral-200 font-bold top-1/4 text-center  lg:left-4 lg:top-1/2 sticky'>
                             Projects
                         </div>
                     </div>
-                    <div>
+                    <div className='pt-24'>
                         <Projects />
                     </div>
                 </div>
             </section>
-            <section ref={contact} className='md:h-screen overflow-hidden flex items-center px-5 justify-center snap-y' id="contact">
+            <section ref={contact} className='h-screen overflow-hidden flex items-center px-5 my-6 justify-center snap-y' id="contact">
                 <div className='left-0 lg:left-24 absolute w-full h-[70%] lg:w-1/4  z-[-1]'>
                     <div className='w-full h-[4rem] text-[3rem] lg:text-[5rem] text-neutral-200 font-bold top-1/4 text-center lg:left-4 lg:top-1/2 sticky'>
                         Contact
                     </div>
                 </div>
-                <div className='flex md:h-fit w-fit  bg-neutral-100 border border-dotted border-primary p-7 gap-7 flex-col lg:flex-row'>
+                <div className='flex h-fit w-fit  bg-neutral-100 border border-dotted border-primary p-7 gap-7 flex-col lg:flex-row'>
                     <Contact />
                 </div>
             </section>

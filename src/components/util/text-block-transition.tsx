@@ -48,7 +48,7 @@ const TextBlockTransition = ({ children, color, delay, isView=false}:{children:R
         if(inView && isView){
             animationHandler()
         }
-    },[animationHandler,inView])
+    },[inView])
     useEffect(()=>{
         if (!isView)
         animationHandler()
